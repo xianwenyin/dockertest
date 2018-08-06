@@ -102,4 +102,5 @@ if [ ! -z $NGINX_X_FORWARDED_FOR ]; then
   sed -i  "s/#set_real_ip_from/set_real_ip_from/g" /etc/nginx/sites-available/default
 fi
 
+chown -R www-data:www-data /data/var/www/html/public_html
 nginx -g "daemon off;"
